@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../static/styles/stylehome.css">
+        <style type="text/css">
+            body{
+	background: url(../static/images/home.jpeg),
+				url(../static/images/home.jpeg),
+				linear-gradient(50deg,#80390a,#fafafa)
+				;
+				background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p class="text-dark rounded text-center" style="text-decoration: underline;
+        font-family: Cambria; 
+        font-size: 200%;
+        text-align: center;">Sistema de Gerenciamento de Chaves</p>    
+            <div style="margin-bottom: 100px;
+            width: 20%;
+            height: 50%;
+            font-family: 'Arial Narrow Bold';
+            font-weight: bold;
+            border-radius: 10px;
+            position: fixed!important;
+            margin-top: 200px;
+            margin-left: 200px;">
+            <center>
+{% from 'bootstrap/form.html' import render_form %}
+
+{{ render_form(form,action=action,method="post") }}
+        </center>
+            </div> 
+    </body>
+
+</html>
+    
+
+{% endblock %}
